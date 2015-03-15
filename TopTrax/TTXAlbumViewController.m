@@ -98,10 +98,13 @@
     TTXTrack *track = self.viewModel.tracks[indexPath.row];
     
     UILabel *trackNameLabel = (UILabel *)[cell viewWithTag:200];
-    trackNameLabel.text = [NSString stringWithFormat:@"%d. %@", indexPath.row, track.name];
+    trackNameLabel.text = [NSString stringWithFormat:@"%d. %@", indexPath.row + 1, track.name];
     
     UILabel *durationLabel = (UILabel *)[cell viewWithTag:201];
-    durationLabel.text = [NSString stringWithFormat:@"%@", track.duration];
+    int minutes = [track.duration intValue] / 60;
+    int seconds = [track.duration intValue] % 60;
+    NSString *time = [NSString stringWithFormat:@"%d:%02d", minutes, seconds];
+    durationLabel.text = [NSString stringWithFormat:@"%@", time];
 }
 
 

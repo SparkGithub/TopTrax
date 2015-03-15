@@ -15,20 +15,21 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="global-checkin-button" translatesAutoresizingMaskIntoConstraints="NO" id="CmS-0y-d8t">
-                        <rect key="frame" x="0.0" y="6" width="81" height="81"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading" translatesAutoresizingMaskIntoConstraints="NO" id="CmS-0y-d8t">
+                        <rect key="frame" x="0.0" y="3" width="81" height="81"/>
                         <constraints>
+                            <constraint firstAttribute="height" constant="81" id="Vn5-oB-gfw"/>
                             <constraint firstAttribute="width" constant="81" id="ffM-0o-SCR"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Radiohead" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xw-uj-005">
-                        <rect key="frame" x="101" y="12" width="491" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radiohead" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xw-uj-005">
+                        <rect key="frame" x="101" y="12" width="458" height="21"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UoW-n9-q4W">
-                        <rect key="frame" x="101" y="33" width="491" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UoW-n9-q4W">
+                        <rect key="frame" x="101" y="33" width="458" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -36,15 +37,24 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="centerY" secondItem="UoW-n9-q4W" secondAttribute="centerY" id="1TU-Ef-4iX"/>
+                    <constraint firstItem="6xw-uj-005" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="93" id="F76-Cz-WLA"/>
                     <constraint firstAttribute="trailingMargin" secondItem="UoW-n9-q4W" secondAttribute="trailing" id="Fes-8J-5BH"/>
                     <constraint firstItem="CmS-0y-d8t" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Gai-Ny-BeX"/>
                     <constraint firstItem="UoW-n9-q4W" firstAttribute="leading" secondItem="6xw-uj-005" secondAttribute="leading" id="R0q-Ty-bwk"/>
                     <constraint firstAttribute="trailingMargin" secondItem="6xw-uj-005" secondAttribute="trailing" id="RFk-2W-98c"/>
                     <constraint firstItem="UoW-n9-q4W" firstAttribute="top" secondItem="6xw-uj-005" secondAttribute="bottom" id="V91-ZR-PgJ"/>
+                    <constraint firstAttribute="centerY" secondItem="CmS-0y-d8t" secondAttribute="centerY" id="WGI-Zt-HyO"/>
                     <constraint firstAttribute="bottom" secondItem="CmS-0y-d8t" secondAttribute="bottom" id="caF-rI-KOE"/>
                     <constraint firstItem="6xw-uj-005" firstAttribute="leading" secondItem="CmS-0y-d8t" secondAttribute="trailing" constant="20" id="cvT-1B-WUm"/>
-                    <constraint firstItem="CmS-0y-d8t" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="fcp-50-dpP"/>
+                    <constraint firstItem="CmS-0y-d8t" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="fcp-50-dpP"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="caF-rI-KOE"/>
+                        <exclude reference="fcp-50-dpP"/>
+                        <exclude reference="cvT-1B-WUm"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="detailsLabelView" destination="UoW-n9-q4W" id="cTC-jp-N9U"/>
@@ -55,6 +65,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="global-checkin-button" width="68" height="44"/>
+        <image name="loading" width="24" height="24"/>
     </resources>
 </document>

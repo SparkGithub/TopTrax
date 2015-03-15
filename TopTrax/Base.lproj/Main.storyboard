@@ -20,9 +20,8 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H9o-fY-Uh6" id="AKe-Oe-JmQ">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="cellImageView" image="nav-button" translatesAutoresizingMaskIntoConstraints="NO" id="cpe-nN-uI8">
+                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="cellImageView" image="loading" translatesAutoresizingMaskIntoConstraints="NO" id="cpe-nN-uI8">
                                             <rect key="frame" x="8" y="8" width="88" height="71"/>
-                                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="88" id="AlL-G4-fVa"/>
                                             </constraints>
@@ -64,6 +63,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Popular Artists" id="yzu-OH-Dzp">
+                        <barButtonItem key="backBarButtonItem" title=" " id="rfL-yc-JQk"/>
                         <barButtonItem key="rightBarButtonItem" image="nav-button" id="GB2-v3-zdZ">
                             <connections>
                                 <action selector="openCloseCountriesMenu:" destination="Xnn-mM-8iJ" id="b9Q-R0-NdQ"/>
@@ -107,7 +107,9 @@
                             <outlet property="delegate" destination="KNF-mS-iQM" id="b6e-NG-yGI"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Radiohead" id="RXw-u0-XBw"/>
+                    <navigationItem key="navigationItem" title="Radiohead" id="RXw-u0-XBw">
+                        <barButtonItem key="backBarButtonItem" title=" " id="hEk-sZ-tqP"/>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P47-hO-R5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -125,7 +127,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="BB7-ej-L9e">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading" translatesAutoresizingMaskIntoConstraints="NO" id="BB7-ej-L9e">
                                 <rect key="frame" x="151" y="72" width="299" height="299"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="299" id="9Y1-8v-wJ8"/>
@@ -185,7 +187,9 @@
                             <constraint firstItem="gVj-KV-7py" firstAttribute="trailing" secondItem="Fhl-Zs-txH" secondAttribute="trailingMargin" id="huJ-yq-swH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="sVN-u0-6Gz"/>
+                    <navigationItem key="navigationItem" id="sVN-u0-6Gz">
+                        <barButtonItem key="backBarButtonItem" title=" " id="6lK-yj-7mS"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="largeImageView" destination="BB7-ej-L9e" id="sTP-1w-pIN"/>
                         <outlet property="tableView" destination="gVj-KV-7py" id="bHy-LW-8hH"/>
@@ -200,9 +204,14 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="N02-kX-MNQ" customClass="MasterNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tUq-WT-xEI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="tUq-WT-xEI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="21"/>
+                            <color key="textShadowColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -215,7 +224,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="110" height="31"/>
+        <image name="loading" width="24" height="24"/>
         <image name="nav-button" width="13" height="30"/>
     </resources>
 </document>
